@@ -22,7 +22,8 @@ namespace LoggingCorrelationId
             ConfigureLog4Net();
 
             var pipeline = endpointConfiguration.Pipeline;
-            pipeline.Register(new AddCorrIdToLog4NetBehavior(), "Adds header to log4net thread context.");
+            pipeline.Register(new StoreCorrelationIdBehavior(), "Stores correlation identifier into session and thread context.");
+            pipeline.Register(new PropagateCorrelationIdBehavior(), "Propagates correlation identifier to outgoing messages");
 
             var endpoint = await Endpoint.Start(endpointConfiguration);
 
