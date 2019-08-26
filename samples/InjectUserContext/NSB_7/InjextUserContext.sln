@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InjectUserContext", "InjectUserContext.csproj", "{DF675548-5875-4BE7-ABD1-9384EB06D81B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF675548-5875-4BE7-ABD1-9384EB06D81B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF675548-5875-4BE7-ABD1-9384EB06D81B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF675548-5875-4BE7-ABD1-9384EB06D81B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF675548-5875-4BE7-ABD1-9384EB06D81B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5731BA4-1DE5-4AAF-8301-55424263ADFB}
+	EndGlobalSection
+EndGlobal

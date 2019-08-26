@@ -1,21 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using NServiceBus;
 using NServiceBus.Logging;
 
-namespace LoggingCorrelationId
+namespace InjectUserContext
 {
     public class MyMessageHandler : IHandleMessages<MyMessage>
     {
+        private readonly MyDependency myDependency;
         private readonly ILog log = LogManager.GetLogger<MyMessageHandler>();
+
+        public MyMessageHandler(MyDependency myDependency)
+        {
+            this.myDependency = myDependency;
+        }
 
         public Task Handle(MyMessage message, IMessageHandlerContext context)
         {
             log.Info("Received message");
 
-            throw new Exception("Boom!");
+            myDependency.DeleteSomething(message.SomeValue);
+
+            return Task.CompletedTask;
         }
     }
 }

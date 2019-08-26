@@ -17,7 +17,7 @@ namespace LoggingCorrelationId
                 // Storing it in NServiceBus context bag, so we can propagate outgoing messages with it as well
                 context.Extensions.Set("BusinessCorrelationId", businessCorrelationId);
                 // Storing it in Log4Net thread context
-                LogicalThreadContext.Properties["BusinessCorrelationId"] = businessCorrelationId;
+                ThreadContext.Properties["BusinessCorrelationId"] = businessCorrelationId;
             }
 
             return next();
